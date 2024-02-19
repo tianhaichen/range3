@@ -462,8 +462,8 @@ CONFIG(debug, debug|release) {
 
 win* {
     LIBS += \
-            -L../../ffmpeg/ffmpeg-4.3.2-win64/bin/ \
-            -L../../ffmpeg/ffmpeg-4.3.2-win64/lib/
+            -L../ffmpeg/ffmpeg-4.3.2-win64/bin/ \
+            -L../ffmpeg/ffmpeg-4.3.2-win64/lib/
 }
 
 LIBS += \
