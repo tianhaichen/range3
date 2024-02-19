@@ -495,7 +495,7 @@ INCLUDEPATH += $${_PRO_FILE_PWD_}/../RangeBase/include
 INCLUDEPATH += $${_PRO_FILE_PWD_}/../RangeModel/include
 INCLUDEPATH += $${_PRO_FILE_PWD_}/../RangeSolverLib/include
 win* {
-    INCLUDEPATH += $${_PRO_FILE_PWD_}/../../ffmpeg/ffmpeg-4.3.2-win64/include
+    INCLUDEPATH += $${_PRO_FILE_PWD_}/../ffmpeg/ffmpeg-4.3.2-win64/include
 }
 
 RESOURCES += \

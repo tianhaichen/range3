@@ -24,6 +24,13 @@ Above command will produce `./build-Release/packages/range-3.2.8.dmg` which can 
 $ open './build-Release/packages/range-3.2.8.dmg'
 ```
 
+### Windows
+
+Qt版本为Qt6。打开项目.../range3/range/range.pro。
+
+在range文件夹下新建文件夹ffmpeg,将下载好的ffmpeg-6.1.1-full_build-shared.7z解压，重命名为ffmpeg-4.3.2-win64。
+
+
 ## Running the software
 ```
 $ $HOME/bin/range-3.2.8/bin/Range
