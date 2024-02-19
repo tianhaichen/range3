@@ -8,7 +8,7 @@ Finite Element Analysis
 ## Prepare build environment
 Following command will download and install all required packages, therefore it must be executed under priviledged (root) user.
 ```
-$ sudo ./scripts/prereqs.sh
+$ sudo ./scripts/prereqs_ubuntu.sh
 ```
 ## Build & Install
 ### Linux
