@@ -34,13 +34,22 @@ Range.pro 更改如下：
 463行
 win* {
     LIBS += \
-            -L../ffmpeg/ffmpeg-4.3.2-win64/bin/ \
-            -L../ffmpeg/ffmpeg-4.3.2-win64/lib/
+            -L$${_PRO_FILE_PWD_}/../ffmpeg/ffmpeg-4.3.2-win64/bin/ \
+            -L$${_PRO_FILE_PWD_}/../ffmpeg/ffmpeg-4.3.2-win64/lib/
 }
 497行
 win* {
     INCLUDEPATH += $${_PRO_FILE_PWD_}/../ffmpeg/ffmpeg-4.3.2-win64/include
 }
+
+536行
+
+win* {
+    ffmpeg.path = $${INSTALLER_DATA_DIR_PATH}/bin
+    ffmpeg.files = ../ffmpeg/ffmpeg-4.3.2-win64/bin/*.dll
+    INSTALLS += ffmpeg
+}
+
 ## Running the software
 ```
 $ $HOME/bin/range-3.2.8/bin/Range

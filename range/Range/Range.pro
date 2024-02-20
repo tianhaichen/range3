@@ -460,11 +460,18 @@ CONFIG(debug, debug|release) {
     CONFIG += console
 }
 
+# win* {
+#     LIBS += \
+#             -L../../ffmpeg/ffmpeg-4.3.2-win64/bin/ \
+#             -L../../ffmpeg/ffmpeg-4.3.2-win64/lib/
+# }
+
 win* {
     LIBS += \
-            -L../ffmpeg/ffmpeg-4.3.2-win64/bin/ \
-            -L../ffmpeg/ffmpeg-4.3.2-win64/lib/
+            -L$${_PRO_FILE_PWD_}/../ffmpeg/ffmpeg-4.3.2-win64/bin/ \
+            -L$${_PRO_FILE_PWD_}/../ffmpeg/ffmpeg-4.3.2-win64/lib/
 }
+
 
 LIBS += \
     -L../TetGen/ \
@@ -494,6 +501,11 @@ INCLUDEPATH += $${_PRO_FILE_PWD_}/../TetGen
 INCLUDEPATH += $${_PRO_FILE_PWD_}/../RangeBase/include
 INCLUDEPATH += $${_PRO_FILE_PWD_}/../RangeModel/include
 INCLUDEPATH += $${_PRO_FILE_PWD_}/../RangeSolverLib/include
+
+# win* {
+#     INCLUDEPATH += $${_PRO_FILE_PWD_}/../../ffmpeg/ffmpeg-4.3.2-win64/include
+# }
+
 win* {
     INCLUDEPATH += $${_PRO_FILE_PWD_}/../ffmpeg/ffmpeg-4.3.2-win64/include
 }
@@ -533,8 +545,15 @@ config.files = pixmaps/range.ico pixmaps/range.icns pixmaps/range.png
 
 INSTALLS += target icons resources config
 
+# win* {
+#     ffmpeg.path = $${INSTALLER_DATA_DIR_PATH}/bin
+#     ffmpeg.files = ../../ffmpeg/ffmpeg-4.3.2-win64/bin/*.dll
+#     INSTALLS += ffmpeg
+# }
+
+
 win* {
     ffmpeg.path = $${INSTALLER_DATA_DIR_PATH}/bin
-    ffmpeg.files = ../../ffmpeg/ffmpeg-4.3.2-win64/bin/*.dll
+    ffmpeg.files = ../ffmpeg/ffmpeg-4.3.2-win64/bin/*.dll
     INSTALLS += ffmpeg
 }
